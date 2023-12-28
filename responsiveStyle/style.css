@@ -1,0 +1,68 @@
+/* ------ This line of code is for Top Navigation bar & Responsive Navigation----------------------------------------------------------------------------------------------------------------------------------------- */
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(244, 199, 143);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+nav{
+    background-color: rgb(255, 255, 255);
+    font-size: 28px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+nav li{
+    display: inline-block;
+    margin: 0 10px;
+}
+nav a{
+    text-decoration: none;
+    color: rgb(102, 100, 100);
+}
+nav a:hover{
+    color: rgb(247, 79, 79);
+}
+.logo{
+    font-size: 4vh;
+    font-weight: bolder;
+}
+#menu{
+    color: rgb(102, 100, 100);
+    margin-right: 10px;
+    cursor: pointer;
+    display: none;
+}
+@media all and (max-width:853px){
+    .logo{
+        align-self: flex-start;
+        margin: 10px 0px 10px 0px;
+    }
+    nav li{
+        display:block;
+        flex-direction: column;
+        padding: 5px 0;
+        margin-left: -48vw;
+    }
+    #menu{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+    ul{
+        display: none;
+    }
+    .showmenu{
+        display: block;
+    }
+    .showlogo{
+        display: none;
+    }
+   
+}
+
+    
+/* ------ Navigation bar code ----------------------------------------------------------------------------------------------------------------------------------------- */
