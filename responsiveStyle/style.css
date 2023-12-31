@@ -29,11 +29,12 @@ body{
     padding:3px 10px;
     color: rgb(102, 100, 100);
 }
-.navBar a:hover{
+.navBarHover a:hover{
     color: #ffffff;
     border-radius: 25px 25px 25px 25px;
     background: linear-gradient(135deg, #5b7ce1, #7f27f4, #f359ee, #f05ab9);
 }
+
 
 #menu{
     color: rgb(102, 100, 100);
