@@ -1,50 +1,212 @@
 /* ------ This line of code is for Top Navigation bar & Responsive Navigation----------------------------------------------------------------------------------------------------------------------------------------- */
+
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(244, 199, 143);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #5b7ce1, #7f27f4, #f359ee, #f05ab9);
 }
-nav{
-    background-color: rgb(255, 255, 255);
-    font-size: 28px;
+.navBar{
     width: 100%;
+    position: fixed;
+    overflow: hidden;
+    top: 10px;
+    background-color: rgb(255, 255, 255);
+    font-size: 25px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    
 }
-nav li{
+.navBar li{
     display: inline-block;
     margin: 0 10px;
 }
-nav a{
+.navBar a{
     text-decoration: none;
+    padding:3px 10px;
     color: rgb(102, 100, 100);
 }
-nav a:hover{
-    color: rgb(247, 79, 79);
+.navBar a:hover{
+    color: #ffffff;
+    border-radius: 25px 25px 25px 25px;
+    background: linear-gradient(135deg, #5b7ce1, #7f27f4, #f359ee, #f05ab9);
 }
-.logo{
-    font-size: 4vh;
-    font-weight: bolder;
-}
+
 #menu{
     color: rgb(102, 100, 100);
-    margin-right: 10px;
+    margin-top: 5px;
     cursor: pointer;
     display: none;
 }
-@media all and (max-width:853px){
+
+/* ------ this line of code is for login form ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+.display_form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15vh;
+    /* justify-content: flex-start; */
+}
+.display_form #loginLogo{
+    font-size: 125px;
+    border-radius: 100%;
+    color: #000000;
+    background: linear-gradient(135deg, #5b7ce1, #7f27f4, #f359ee, #f05ab9);
+}
+.display_form .form{
+    margin-top: 15vh;
+    margin-left: 10vw;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius:40px 50% 50% 40px;
+    padding: 20px;
+    box-shadow: 10px 30px 20px rgba(65, 62, 62, 0.834);
+    width: 280px;
+    text-align: center;
+}
+.display_form .form input{
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #dbdbdb;
+    background-color: #ffffff;
+}
+.form #username{
+    border-radius: 4px;
+}
+.form #password{
+    border-radius: 4px 5px 100px 4px;
+}
+
+.form button {
+    display: block;
+    width: 89%;
+    padding: 10px;
+    margin: 8px 0;
+    background-color: #0095f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 0px 0px 12.2em/6.3em 0px;;
+    cursor: pointer;
+}
+.display_form p,a{
+    font-weight: bold;
+}
+.display_form p{
+    margin-left: 11vw;
+    margin-top: 3vh;
+    color: #ffffff;
+}
+
+.display_form a{
+    color: #0095f6;
+    text-decoration: none;
+}
+/* this is for wave background ***************************** */
+
+body::before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/wave.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+/* this is for hello girl animetion top to bottom if the screen is full **************** */
+
+.animeTop::after {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 18vh;
+    left: 10vw;
+    height: 30vh;
+    width: 25vh;
+    background-image: url('../img/hello_girl.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    animation: toptobottom 3s linear infinite;
+}
+@keyframes toptobottom{
+    0%,100% {
+        top: 2vw; 
+    }
+    50% {
+        top: 17vw; 
+    }
+}
+
+/* this is for hello girl animetion left to right if the screen is smale**************** */
+
+.animeLeft::after{
+    content: '';
+    display: block;
+    position: fixed;
+    top: 35vh;
+    left: 13vw;
+    height: 30vh;
+    width: 25vh;
+    background-image: url('../img/hello_girl.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    animation: lefttoright 3s linear infinite;
+}
+@keyframes lefttoright{
+    0%,100%{
+        left:13vw;
+    }
+    50%{
+        left:45vw;
+    }
+}
+
+/* ------ This line of code for footer ----------------------------------------------------------------------------------------------------------------------------------------- */
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    width: 100%;
+    background-color: aliceblue;
+    position: fixed;
+    overflow: hidden;
+    bottom:10px ;
+    color: #000000;
+    font-size: 14px;
+}
+.footerLink span{
+    padding: 0 5px;
+}
+.footerInfo{
+    display: flex;
+    align-items: center;
+}
+
+/* this is for mobile **************************** */
+
+@media screen and (max-width:900px){
     .logo{
         align-self: flex-start;
         margin: 10px 0px 10px 0px;
     }
-    nav li{
+    .navBar li{
         display:block;
         flex-direction: column;
         padding: 5px 0;
-        margin-left: -48vw;
+        border-bottom: 1px solid #ddd;
+        /* margin-left: -48vw; */
     }
     #menu{
         display: block;
@@ -52,7 +214,7 @@ nav a:hover{
         right: 20px;
         top: 15px;
     }
-    ul{
+    nav ul{
         display: none;
     }
     .showmenu{
@@ -61,8 +223,174 @@ nav a:hover{
     .showlogo{
         display: none;
     }
-   
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    .footerInfo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    @media screen and (max-height:600px) {
+        .display_form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .display_form .form{
+            margin: 10vh 0 0 0;
+        }
+        .display_form p{
+            margin:10px 0 0 0;
+        }
+    }
+    
 }
 
+@media screen and (max-width:700px){
+    @keyframes lefttoright{
+        50%{
+            left:55vw;
+        }
+    }
+    @keyframes toptobottom {
+        50%{
+            top:2vw;
+        }
+    }
+}
+/* this line fo code for mobile ********************************************** */
+
+@media all and (max-width:530px){
+    .navBar{
+        position: relative;
+        font-size: 18px;
+    }
+    .display_form {
+        padding: 0; 
+        justify-content: center;
+        align-items: center;
+    }
+    .display_form #loginLogo{
+        font-size: 30vw;
+    }
+    .display_form .form{
+        margin: 40px 0 0 0;
+        border-radius: 30vh 30vh 2vh 2vh;
+        width: 50vw;
+    }
+    .form #password{
+        border-radius: 4px;
+    }
     
-/* ------ Navigation bar code ----------------------------------------------------------------------------------------------------------------------------------------- */
+    .form button {
+        width: 100%;
+        border-radius:4px;
+    }
+    .display_form p,a{
+        font-size: 4vw;
+    }
+    .display_form p{
+        margin-left: 0;
+    }
+    footer{
+        /* display: none; */
+        font-size: 10px;
+    }
+    .animeTop::after{
+        display: none;
+    }
+    .animeLeft::after{
+        display: none;
+    }
+}
+@media screen and (max-width:360px){
+    .navBar li{
+        margin: 2px;
+    }
+    .navBar ul{
+        padding: 0;
+    }
+    footer{
+        justify-content: center;
+    }
+    .footerInfo{
+        display: block;
+    }
+    address{
+        display: none;
+    }
+}
+@media screen and (max-width:270px){
+    #menu{
+        display: none;
+    }
+    .navBar{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .navBar ul{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+    .navBar il{
+        padding: 0;
+        margin: 0;
+    }
+}
+@media screen and (max-width:232px){
+      .animeTop{
+        display: none;
+      }
+      .display_form{
+        margin-top: 15vh;
+      }
+      footer{
+        display: none;
+      }
+}
+@media screen and (max-height:740px){
+    .navBar{
+        position: relative;
+    }
+    .display_form{
+        padding-top:0;
+    }
+    .display_form #loginLogo{
+        font-size: 15vh;
+    }
+    .animeTop::after{
+        /* display: none; */
+        top:32vh
+    }.animeLeft::after{
+        display: none;
+    }
+    @media screen and (max-width:900px) {
+        @keyframes toptobottom {
+            0%,50%{
+                left: 30vh;
+            }
+            20%{
+                left: 60vh;
+            }
+        }
+    }
+    footer{
+        margin-top: 10vh;
+        position: relative;
+    }
+    
+}
+@media screen and (max-height:600px) {
+    .animeLeft::after{
+        display: none;
+    }
+    .animeTop::after{
+        display: none;
+    }
+}
