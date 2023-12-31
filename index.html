@@ -7,16 +7,17 @@
         <meta name="author"content="❤️kuttydhilip❤️">
         <!-- <meta http-equiv="refresh" content="5"> -->
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="icon"title="windcare"type="image/png"href="img/windcare.png">
+        <link rel="icon"title="windcare"type="image/svg"href="img/logo_code.svg">
         <link rel="stylesheet" href="responsiveStyle/style.css" title="make more responsive">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Attendance Management</title>
     </head>
 <body>
 <!-- this line of code is for navigation bar in horizontal line & resposive navigation bar***************************************** -->
+<div class="animeTop">
     <nav class="navBar">
         <div class="logo">
-            <a href="">Kuttydhilip</a>
+            <a href=""><img src="img/windcare_logo.png"></a>
         </div>
         <ul>
             <li><a href="#login"><i class="fa fa-home"></i>Login</a></li>
@@ -26,7 +27,29 @@
         </ul>
         <div class="fa fa-bars" id="menu"></div>
     </nav>
-    <script type="text/javascript" src="script_file/style_script.js"></script>
+</div>
 <!-- ****************************************************************************************************************************** -->
+
+<div class="display_form">
+    <form class="form" action="/login" method="post">
+        <i class="fa fa-user-circle" id="loginLogo"></i>
+        <br>
+        <input type="text" id="username" placeholder="Username" name="username" required>
+        <br>
+        <input type="password" id="password" placeholder="Password" name="password" required>
+        <br>
+        <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="#">Sign up</a></p>
+</div>
+<footer>
+    <div class="footerLink">
+        <span>Website Policies</span>|<span>Help</span>|<span>contact us</span>|<span>Feedback</span>
+    </div>
+    <div class="footerInfo">
+        <p>Website information Manager: ❤️kuttydhilip❤️ <address> - Rajiv gandhi nagar kk road VPM</address></p>
+    </div>
+</footer>
+<script type="text/javascript" src="script_file/style_script.js"></script>
 </body>
 </html>
